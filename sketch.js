@@ -33,6 +33,33 @@ console.log(names);
 names.splice(1,1,"Quagmire"); //replacing (Brian) with (Quagmire)
 console.log(names);
 
+
+let basket = ["apple", "banana", "orange", "pear"];
+console.log("Fruit " + (basket.indexOf(basket[0]) +1) + ": " + basket[0]); //log the 1st fruit
+
+console.log(basket.length -1) //logs the last fruit, -1 is neccesary bc arrays start at 0
+console.log("Last fruit: " + basket[3]); //prints last fruit
+
+console.log(basket.indexOf("banana")); //finds the index of "banana"
+basket[1] = "kiwi"
+console.log(basket)
+
+basket.pop();
+console.log(basket)
+basket.unshift("mango")
+for(let i = 0; i < basket.length; i++) { //looping through the array to print each name
+	console.log("Fruit " + (basket.indexOf(basket[i]) +1) + ": " + basket[i]);
+}
+if (basket.indexOf("orange") !== -1) { //finds the index of "orange"
+	console.log("orange found at index " + basket.indexOf("orange"));
+}
+if (basket.indexOf("orange") == -1) { //finds the index of "orange"
+	console.log("orange not found");
+}
+
+
+let citrus = basket.slice(0 +1,-1);
+console.log(citrus); //creates a new array with the middle two fruits
 function setup() {
 	createCanvas(500, 500);
 	background(55);
@@ -42,3 +69,4 @@ function setup() {
 function draw() {
 	rect(250, 250, 100, 100);
 }
+
