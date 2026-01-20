@@ -21,6 +21,18 @@ for(let i = 0; i < names.length; i++) { //looping through the array to print eac
 	console.log(names[i]);
 }
 
+console.log(names.indexOf("Brian")); //finding the index of (Brian)
+console.log(names.indexOf("Meg")); //finding the index of (Meg) which is no longer in the array
+
+let lads = names.slice(0,2);
+console.log(lads); //creating a new array with the first two names in the original array
+
+names.splice(1,1); //removing the second name (Brian) from the original array
+console.log(names);
+
+names.splice(1,1,"Quagmire"); //replacing (Brian) with (Quagmire)
+console.log(names);
+
 function setup() {
 	createCanvas(500, 500);
 	background(55);
