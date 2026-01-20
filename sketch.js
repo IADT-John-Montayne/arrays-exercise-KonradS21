@@ -58,7 +58,8 @@ if (basket.indexOf("orange") == -1) { //finds the index of "orange"
 }
 
 
-let citrus = basket.slice(0 +1,-1);
+let citrus = basket.slice(1, basket.length -1);
+console.log(basket)
 console.log(citrus); //creates a new array with the middle two fruits
 function setup() {
 	createCanvas(500, 500);
